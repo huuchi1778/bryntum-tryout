@@ -13,7 +13,7 @@ const scheduler = new Scheduler({
 
   events : [
       { resourceId : 1, startDate : '2022-01-01', endDate : '2022-01-10' },
-      { resourceId : 2, startDate : '2022-01-02', endDate : '2022-01-09' }
+      { resourceId : 1, startDate : '2022-01-02', endDate : '2022-01-09' }
   ],
 
   columns : [
