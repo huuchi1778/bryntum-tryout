@@ -1,7 +1,18 @@
-import  {Scheduler} from 'https://127.0.0.1:8000/lib/scheduler.wc.module.js';
+import  {Scheduler, Toolbar, Button} from 'https://127.0.0.1:8000/lib/scheduler.wc.module.js';
+
+const schedulerContainer = document.getElementById('scheduler-container');
+
+const customToolBar = new Toolbar({
+    appendTo: schedulerContainer,
+    height: '30px',
+    items: [
+        { text : 'Add', icon : 'b-fa b-fa-plus' },
+        { text : 'Delete', icon : 'b-fa b-fa-trash' }
+    ]
+})
 
 const scheduler = new Scheduler({
-  appendTo : document.getElementById('scheduler-container'),
+  appendTo : schedulerContainer,
 
   startDate : new Date(2022, 0, 1),
   endDate   : new Date(2022, 0, 10),
@@ -20,3 +31,4 @@ const scheduler = new Scheduler({
       { text : 'Name', field : 'name', width : 160 }
   ]
 });
+
